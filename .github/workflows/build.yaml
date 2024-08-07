@@ -33,7 +33,7 @@ jobs:
       - name: Build and Push Docker Image
         uses: docker/build-push-action@v5
         with:
-          context: ./app
+          context: .
           push: true
           tags: ${{ secrets.AWS_ECR_REGISTRY }}/${{ vars.AWS_ECR_REPOSITORY_APP }}:${{ steps.tag.outputs.tag }}
         timeout-minutes: 5
