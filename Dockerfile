@@ -1,6 +1,6 @@
 FROM node:18-alpine3.18
 ENV NODE_ENV=production
-ENV NEXT_PUBLIC_API_HOST_REMOTE=http://il.pride.improwised.local/backend/api/v1
+ENV NEXT_PUBLIC_API_HOST_REMOTE=http://il.pride.improwised.dev/backend/api/v1
 WORKDIR /usr/app
 COPY --chown=node ./package*.json ./
 RUN npm install --global pm2
